@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banker's Algorithm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Banker's Algorithm Simulator</h1>
+
+        <div class="input-section">
+            <h2>Input Parameters</h2>
+            <label for="numProcesses">Number of Processes:</label>
+            <input type="number" id="numProcesses" min="1" value="5"><br><br>
+
+            <label for="numResources">Number of Resources:</label>
+            <input type="number" id="numResources" min="1" value="3"><br><br>
+
+            <h3>Available Resources</h3>
+            <div id="availableResources"></div>
+
+            <h3>Maximum Demand</h3>
+            <div id="maxDemand"></div>
+
+            <h3>Current Allocation</h3>
+            <div id="currentAllocation"></div>
+
+            <button onclick="initializeMatrices()">Initialize Matrices</button>
+            <button onclick="runBankersAlgorithm()">Run Banker's Algorithm</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Output</h2>
+            <pre id="output"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
